@@ -11,51 +11,51 @@ body{
 
 .container {
   width: 100%;
+  height: 100%;
 }
 
 .preview {
-  height: 100%;
-  width: 100%;
+  height: 300px;
+  width: 300px;
   background-size: cover;
   background-image: no-repeat;
+  margin: 6px;
+  display: inline-block;
 }
 
 .baku {
   background-image: url("../images/baku.jpg");
-  float: left;
+  float: none;
   clear: both;
 }
 .london {
   background-image: url("../images/london.png");
-  float: right;
+  float: none;
 }
 .madrid {
   background-image: url("../images/madrid.jpg");
-  float: left;
+  float: none;
   clear: both;
 }
 .rome {
   background-image: url("../images/rome.jpg");
-  float: right;
+  float: none;
 }
 
-  @@media only screen and (max-width: 500px) {
+  @@media screen and (min-width: 575px) {
     .preview {
-    width: 100%;
-    height: 50%;
+          display: inline-block;
       }
 }
 
-@media only screen and (max-width: 700px) {
+@media  screen and (min-width: 991px) {
   .preview {
-    width: 100%;
-    height: 200px;
+    display: inline-block;
   }
 }
 
-@media only screen and (max-width: 1199px) {
+@media screen and (min-width: 1199px) {
   .preview {
-    width: 100%;
-    height: 200px;
+    display: inline-block;
   }
 }
