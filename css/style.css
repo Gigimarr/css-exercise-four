@@ -2,87 +2,60 @@
   box-sizing: border-box;
 }
 
-html,body {
-  background-color: #dadada;
+body{
+  font-family: system-ui, sans-serif;
   font-size: 10px;
-  font-family: sans-serif;
-  margin: 1%;
-  height: 100%;
-  width: 100%;
+  margin: 8px;
+  background-color: #dadada;
 }
 
 .container {
-  width: auto;
-  height: inherit;
-  background-color: red;
-}
-
-.preview.baku {
-  width: 20%;
-  height: 20%;
-  background-image: url("../images/baku.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: 1%;
-  padding: 10px;
-  display: inline-block;
-}
-
-.preview.london {
-  width: 20%;
-  height: 20%;
-  background-image: url("../images/london.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: 1%;
-  padding: 10px;
-  display: inline-block;
-}
-
-.preview.madrid {
-  width: 20%;
-  height: 20%;
-  background-image: url("../images/madrid.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: 1%;
-  padding: 10px;
-  display: inline-block;
-}
-
-.preview.rome {
-  width: 20%;
-  height: 20%;
-  background-image: url("../images/rome.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: 1%;
-  padding: 10px;
-  display: inline-block;
-}
-
-@@media screen and (min-width: 575px) {
-.preview.baku, .preview.london, .preview.madrid, .preview.rome  {
-  margin: 1%;
   width: 100%;
+}
+
+.preview {
   height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-image: no-repeat;
 }
 
+.baku {
+  background-image: url("../images/baku.jpg");
+  float: left;
+  clear: both;
 }
-  @@media screen and (min-width: 991px) {
-  .preview.baku, .preview.london, .preview.madrid, .preview.rome  {
-    margin: 1%;
+.london {
+  background-image: url("../images/london.png");
+  float: right;
+}
+.madrid {
+  background-image: url("../images/madrid.jpg");
+  float: left;
+  clear: both;
+}
+.rome {
+  background-image: url("../images/rome.jpg");
+  float: right;
+}
+
+  @@media only screen and (max-width: 500px) {
+    .preview {
     width: 100%;
-    height: 100%;
-  }
-
+    height: 50%;
+      }
 }
 
-@@media screen and (min-width: 1199px) {
-  .preview.baku, .preview.london, .preview.madrid, .preview.rome  {
-    margin: 1%;
+@media only screen and (max-width: 700px) {
+  .preview {
     width: 100%;
-    height: 100%;
+    height: 200px;
   }
+}
 
+@media only screen and (max-width: 1199px) {
+  .preview {
+    width: 100%;
+    height: 200px;
+  }
 }
